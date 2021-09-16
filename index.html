@@ -126,7 +126,7 @@
     <div class="left-nav d-none d-lg-block">
         <div class="menu-bg">
             <div class="buttons-group">
-                <button class="button-nav">
+                <button class="button-nav" >
                     <div>
                         <svg class="nav-btn-ic" width="24" height="24" viewBox="0 0 24 24" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
@@ -309,6 +309,7 @@
 
     <div class="wrapper">
         <div class="container">
+            <!--Название страницы и кнопка назад-->
             <div class="pg-nav row">
                 <div class="col-12">
                     <div class="pg-nav-name">
@@ -326,6 +327,7 @@
                     </div>
                 </div>
             </div>
+            <!--Блок информации о компании-->
             <div class="page-block">
                 <div class="content col-12">
                     <div class="block-name row">
@@ -352,9 +354,9 @@
                         </div>
                         <div class="col-5">
                             <label class="custom-file-upload">
-                                <input type="file" accept=".jpg, .jpeg, .png"/>
-                                
-                            </label> 
+                                <input type="file" accept=".jpg, .jpeg, .png" />
+
+                            </label>
                         </div>
                     </div>
                     <div class="page-input-small row">
@@ -414,6 +416,7 @@
                     </div>
                 </div>
             </div>
+            <!--Товары-->
             <div class="page-block">
                 <div class="content col-12">
                     <div class="block-name row">
@@ -645,6 +648,7 @@
                     </div>
                 </div>
             </div>
+            <!--Информация и доставке-->
             <div class="page-block">
                 <div class="content col-12">
                     <div class="block-name row">
@@ -653,7 +657,7 @@
                         </div>
                         <div class="col-6">
                             <div class="add-delivery">
-                                <button type="button" class="add-btn">
+                                <button type="button" class="add-btn" data-bs-toggle="modal" data-bs-target="#delivery-modal">
                                     <span><svg class="add-icon-btn" width="24" height="24" viewBox="0 0 24 24"
                                             fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M19 13H13V19H11V13H5V11H11V5H13V11H19V13Z" fill="#4176C7" />
@@ -768,6 +772,26 @@
                     </div>
                 </div>
             </div>
+            <!--Модалка добавления доставки-->
+            <div class="modal fade" id="delivery-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="delivery-modalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <p class="modal-title" id="staticBackdropLabel">Создание способа доставки</p>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                    </div>
+                    <div class="modal-body">
+                        <label class="up-label" for="add-delivery-modal" class="form-label">Наименование способа доставки</label>
+                        <input type="text" name="add-delivery-modal" id="company-name" class="form-control" placeholder="Введите наименование">
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="wf-button-secondary-blue" data-bs-dismiss="modal">Закрыть</button>
+                      <button type="button" class="wf-button-primary-blue">Создать</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <!--Информация об оплате-->
             <div class="page-block">
                 <div class="content col-12">
                     <div class="block-name row">
@@ -776,7 +800,7 @@
                         </div>
                         <div class="col-6">
                             <div class="add-delivery">
-                                <button type="button" class="add-btn">
+                                <button type="button" class="add-btn" data-bs-toggle="modal" data-bs-target="#payment-modal">
                                     <span><svg class="add-icon-btn" width="24" height="24" viewBox="0 0 24 24"
                                             fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M19 13H13V19H11V13H5V11H11V5H13V11H19V13Z" fill="#4176C7" />
@@ -983,6 +1007,26 @@
                     </div>
                 </div>
             </div>
+            <!--Модалка добавления инф об оплате-->
+            <div class="modal fade" id="payment-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="payment-modalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <p class="modal-title" id="payment-modalLabel">Создание способа оплаты</p>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                    </div>
+                    <div class="modal-body">
+                        <label class="up-label" for="add-delivery-modal" class="form-label">Наименование способа доставки</label>
+                        <input type="text" name="add-delivery-modal" id="company-name" class="form-control" placeholder="Введите наименование">
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="wf-button-secondary-blue" data-bs-dismiss="modal">Закрыть</button>
+                      <button type="button" class="wf-button-primary-blue">Создать</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <!--Условия-->
             <div class="page-block">
                 <div class="content col-12">
                     <div class="block-name row">
@@ -1032,6 +1076,7 @@
                     </div>
                 </div>
             </div>
+            <!--Документы-->
             <div class="page-block">
                 <div class="content col-12">
                     <div class="block-name row">
@@ -1044,11 +1089,12 @@
                             <body2>Перетащите файл сюда<br>или</body2>
                         </div>
                         <label class="bottom-file-upload">
-                            <input type="file"/>
-                        </label> 
+                            <input type="file" />
+                        </label>
                     </div>
                 </div>
             </div>
+            <!--Контрагенты-->
             <div class="page-block">
                 <div class="content col-12">
                     <div class="block-name row">
@@ -1086,10 +1132,12 @@
 
                 </div>
             </div>
+            <!--Пустой блок для скролла-->
             <div class="scroll-space">
 
             </div>
         </div>
+        <!--Нижняя плашка-->
         <div class="container-fluid">
             <div class="container">
 
