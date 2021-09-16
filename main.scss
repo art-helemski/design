@@ -879,6 +879,16 @@ input[class="custom-control-input"]:checked + .custom-control-label::before {
   height: 60px;
 }
 
+.up-label {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 150%;
+  color: #646978;
+  margin-bottom: 8px;
+}
+
 
 @media (max-width: 1199px) {
   .wrapper {
